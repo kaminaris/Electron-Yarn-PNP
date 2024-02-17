@@ -1,0 +1,12 @@
+dist-electron
+.idea
+.vscode
+/node_modules
+yarn.lock
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

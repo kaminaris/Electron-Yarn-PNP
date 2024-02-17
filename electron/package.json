@@ -1,0 +1,14 @@
+{
+	"name": "electron-boilerplate",
+	"version": "1.0.0",
+	"main": "dist-electron/index.js",
+	"author": "Pawel",
+	"license": "MIT",
+	"packageManager": "yarn@4.1.0",
+	"scripts": {
+		"start": "electron ."
+	},
+	"devDependencies": {
+		"electron": "28.2.3"
+	}
+}

@@ -1,14 +1,24 @@
 {
-	"name": "electron-boilerplate",
+	"name": "electron-app",
 	"version": "1.0.0",
-	"main": "dist-electron/index.js",
+	"main": "index.js",
 	"author": "Pawel",
 	"license": "MIT",
-	"packageManager": "yarn@4.1.0",
 	"scripts": {
-		"start": "electron ."
+		"build": "webpack --config ./webpack.config.js"
 	},
 	"devDependencies": {
-		"electron": "^28.2.3"
-	}
+		"@types/node": "20.11.19",
+		"electron": "^28.2.3",
+		"ts-loader": "9.5.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3",
+		"webpack": "5.90.2",
+		"webpack-cli": "5.1.4"
+	},
+	"packageManager": "yarn@4.1.0",
+	"workspaces": [
+		"./",
+		"electron"
+	]
 }

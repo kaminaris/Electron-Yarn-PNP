@@ -4,15 +4,38 @@
 	"main": "index.js",
 	"author": "Pawel",
 	"license": "MIT",
+	"private": true,
 	"scripts": {
-		"build": "webpack --config ./webpack.config.js"
+		"ng": "ng",
+		"start:angular": "ng serve",
+		"build:angular": "ng build",
+		"watch:angular": "ng build --watch --configuration development",
+		"build:electron": "webpack --config ./electron.webpack.js",
+		"serve:electron": "webpack --config ./electron.webpack.js --watch --env=serve=true"
+	},
+	"dependencies": {
+		"@angular/animations": "17.2.0",
+		"@angular/common": "17.2.0",
+		"@angular/compiler": "17.2.0",
+		"@angular/core": "17.2.0",
+		"@angular/forms": "17.2.0",
+		"@angular/platform-browser": "17.2.0",
+		"@angular/platform-browser-dynamic": "17.2.0",
+		"@angular/router": "17.2.0",
+		"rxjs": "7.8.0",
+		"tslib": "2.3.0",
+		"zone.js": "0.14.3"
 	},
 	"devDependencies": {
+		"@angular-devkit/build-angular": "17.2.0",
+		"@angular/cli": "17.2.0",
+		"@angular/compiler-cli": "17.2.0",
 		"@types/node": "20.11.19",
-		"electron": "^28.2.3",
+		"cross-spawn": "^7.0.3",
+		"electron": "29.0.0",
 		"ts-loader": "9.5.1",
-		"tslib": "^2.6.2",
-		"typescript": "^5.3.3",
+		"tslib": "2.6.2",
+		"typescript": "5.3.3",
 		"webpack": "5.90.2",
 		"webpack-cli": "5.1.4"
 	},

@@ -11,6 +11,7 @@
 		"build:angular": "ng build",
 		"watch:angular": "ng build --watch --configuration development",
 		"build:electron": "webpack --config ./electron.webpack.js",
+		"publish:electron": "yarn build:electron && cross-env OMP_VER=srd electron-builder -c builder-config.js build --publish=never",
 		"serve:electron": "webpack --config ./electron.webpack.js --watch --env=serve=true"
 	},
 	"dependencies": {
@@ -31,8 +32,10 @@
 		"@angular/cli": "17.2.0",
 		"@angular/compiler-cli": "17.2.0",
 		"@types/node": "20.11.19",
-		"cross-spawn": "^7.0.3",
+		"cross-env": "7.0.3",
+		"cross-spawn": "7.0.3",
 		"electron": "29.0.0",
+		"electron-builder": "24.12.0",
 		"ts-loader": "9.5.1",
 		"tslib": "2.6.2",
 		"typescript": "5.3.3",
@@ -43,5 +46,10 @@
 	"workspaces": [
 		"./",
 		"electron"
-	]
+	],
+	"dependenciesMeta": {
+		"app-builder-lib@24.12.0": {
+			"unplugged": true
+		}
+	}
 }
